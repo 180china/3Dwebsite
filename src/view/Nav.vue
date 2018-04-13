@@ -1,6 +1,7 @@
 <template>
   <nav class="nav">
-    <div data-route="home" @click="clickNavItem">Home</div>
+    <div data-route="" @click="clickNavItem"><img src="../assets/logo.png" alt="" width="30"></div>
+    <div data-route="works" @click="clickNavItem">Works</div>
     <div data-route="contact" @click="clickNavItem">Contact</div>
   </nav>
 </template>
@@ -20,19 +21,21 @@ export default {
     },
     setNavStyle(){
       switch(this.$route.path){
-        case '/home':
-          this.currentNavIndex=0;
-          this.$root.main.show('cube');
+        case '/works':
+          this.currentNavIndex=1;
+          // $('.tips').show();
+          // this.$root.main.show('cube');
           break;
         case '/contact':
-          this.currentNavIndex=1;
-          this.$root.main.show('cone');
+          this.currentNavIndex=2;
+          // this.$root.main.show('cone');
           break;
         default :
           this.currentNavIndex=-1;
-          this.$root.main.show('');
+          // this.$root.main.show('cube');
           break;
       }
+      this.$root.main.show();
       var items=$('.nav >div').removeClass('active');
       if(this.currentNavIndex!=-1){
         items.eq(this.currentNavIndex).addClass('active');

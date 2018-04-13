@@ -1,0 +1,29 @@
+.b-style-4:hover {
+  color:#1AAB8A;
+}
+.b-style-4::before,
+.b-style-4::after {
+  box-sizing: border-box;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform-origin: center;
+}
+.b-style-4::before {
+  border-top: 2px solid #1AAB8A;
+  border-bottom: 2px solid #1AAB8A;
+  transform: scale(0, 1);
+}
+.b-style-4::after {
+  border-left: 2px solid #1AAB8A;
+  border-right: 2px solid #1AAB8A;
+  transform: scale(1, 0);
+}
+.b-style-4:hover::before,
+.b-style-4:hover::after {
+  transform: scale(1, 1);
+  transition: transform 0.5s;
+}

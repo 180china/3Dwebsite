@@ -1,5 +1,7 @@
 import './css/style.css';
 
+// import './css/_mixin.scss';
+
 import Vue from 'vue';
 import App from './App';
 import router from './router';

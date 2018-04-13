@@ -1,31 +1,27 @@
 <template>
-  <div class="home fadeInBlur">
-    <img src="../assets/glm1.jpg" width="200" alt="">
-    <h1>{{ title }}</h1>
-  </div>
+    <div class="home">
+      <h1>welcome</h1>
+    </div>
 </template>
 
 <script>
-export default {
-  name: 'Home',
-  data(){
-    return {
-
+    export default {
+        name: "home"
     }
-  },
-  computed:{
-    title(){
-      return `page name is ${this.$options.name}`;
-    }
-  },
-  mounted(){
-    //console.log(this);
-  }
-}
 </script>
 
-<style scoped>
+<style lang="scss">
   .home{
-    color: white;
+    width: 1000px;
+    margin:0 auto;
+    padding-top: 300px;
+
+    font-size: 50px;
+    text-align: center;
+    color:white;
+
+    h1{
+      text-shadow: 0 0 10px rgba(255,0,0,0.95);
+    }
   }
 </style>

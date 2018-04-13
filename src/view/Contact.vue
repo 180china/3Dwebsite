@@ -15,8 +15,12 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style lang="scss" scoped>
   .contact{
+    width: 1000px;
+    margin:0 auto;
+    padding-top: 200px;
     color: white;
+    text-align: center;
   }
 </style>
