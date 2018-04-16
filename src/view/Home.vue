@@ -1,6 +1,8 @@
 <template>
     <div class="home">
-      <h1>welcome</h1>
+      <h1>
+        <span>w</span><span>e</span><span>l</span><span>c</span><span>o</span><span>m</span><span>e</span>
+      </h1>
     </div>
 </template>
 
@@ -11,17 +13,5 @@
 </script>
 
 <style lang="scss">
-  .home{
-    width: 1000px;
-    margin:0 auto;
-    padding-top: 300px;
 
-    font-size: 50px;
-    text-align: center;
-    color:white;
-
-    h1{
-      text-shadow: 0 0 10px rgba(255,0,0,0.95);
-    }
-  }
 </style>
