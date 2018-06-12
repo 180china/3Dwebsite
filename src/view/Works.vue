@@ -12,6 +12,9 @@
           <div class="item-img-out">
             <img :src='"static/img/pro/"+val.name+"_"+val.time+".jpg"' width='250' alt=""/>
           </div>
+          <div class="item-code">
+            <img :src='"static/img/pro/"+val.name+"_"+val.time+"_code.png"' width="150" alt="">
+          </div>
         </div>
       </div>
     </div>
@@ -52,9 +55,11 @@ export default {
   },
   methods:{
     backTop(){
-      $(window).scrollTop(0);
+      $('html,body').animate({scrollTop:0},800);
+      // $(window).scrollTop(0);
     },
     onScroll(){
+      // return;
       //1：$window.scrollTop()  当钱滚动条相对于顶部的偏移量
       //2：$window.height() window的高度
       //3：document.body.clientHeight 文档的高度
@@ -69,7 +74,7 @@ export default {
         let $self = $(this);
         let $selfHeight=$self.height();
         let $selfOffsetTop = $self.offset().top;
-        if (($windowScrollTop + $windowHeight) > ($selfOffsetTop) && (($selfOffsetTop + $self.height()) > $windowScrollTop)) {
+        /*if (($windowScrollTop + $windowHeight) > ($selfOffsetTop) && (($selfOffsetTop + $self.height()) > $windowScrollTop)) {
 
           let a=($selfOffsetTop-$windowScrollTop);
           let b=($windowHeight-$selfHeight);
@@ -86,7 +91,7 @@ export default {
           });
 
           $self.data('')
-        };
+        };*/
 
         if(($selfOffsetTop - $windowScrollTop) < ($windowHeight/2)){
           _this.current=$self.data('index');
@@ -148,7 +153,7 @@ export default {
     width:1000px;
     height: auto;
     margin:0 auto;
-    padding:300px 0;
+    padding:100px 0;
   }
 
   .cotainer:after{
@@ -182,6 +187,7 @@ export default {
     position:relative;
     width: 50%;
     height:auto;
+    margin-bottom:50px;
     float: left;
     text-align: center;
     @include css3(transform,translate(0,0));
@@ -219,18 +225,45 @@ export default {
       }
     }
     div.item-img{
+      position:relative;
+      overflow: hidden;
       cursor:pointer;
       display: inline-block;
       box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
       line-height: 0;
 
       .item-img-out{
-        @include css3(transition,all .3s);
+        //@include css3(transition,all .3s);
+        transition:transform 0.6s ease-out;
       }
 
-      &:hover .item-img-out{
-        @include css3(transform,scale(1.02));
+      .item-code{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        transition: opacity 0.3s ease-out;
+
+        img{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      &:hover{
+        .item-img-out{
+          transform:scale(1.02);
+        }
+        .item-code{
+          opacity: 1;
+        }
       }
     }
+
   }
 </style>

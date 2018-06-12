@@ -85,7 +85,7 @@ function Main() {
     // circle.position.z= 0;
     // circle.name = 'circle';
 
-    for ( var i = 0; i < 200; i ++ ) {
+    for ( var i = 0; i < 50; i ++ ) {
 
       boid = boids[ i ] = new Boid();
       boid.position.x = Math.random() * 400 - 200;

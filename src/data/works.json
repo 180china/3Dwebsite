@@ -1,4 +1,9 @@
 [
+  {"name":"180","brand":"180","pro_name":"老虎机摇奖","time":"2018.4.1","desc":"canvas + egret"},
+  {"name":"180","brand":"180","pro_name":"抽奖大转盘","time":"2018.4.2","desc":"canvas + egret"},
+  {"name":"180","brand":"180","pro_name":"砸蛋抽大奖","time":"2018.4.3","desc":"canvas + egret"},
+  {"name":"180","brand":"180","pro_name":"扯红包","time":"2018.4.4","desc":"canvas + egret"},
+
   {"name":"porsche","brand":"保时捷","pro_name":"prosche APP","time":"2017.2.4","desc":"webpack项目管理 + vue + es6 + Hbuilder打包"},
 
   {"name":"RR","brand":"劳斯莱斯","pro_name":"想象之印记","time":"2017.2.2","desc":"canvas + egret"},
