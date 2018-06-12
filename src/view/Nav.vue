@@ -1,8 +1,8 @@
 <template>
   <nav class="nav">
-    <div data-route="" @click="clickNavItem"><img src="../assets/logo.png" alt="" width="30"></div>
-    <div data-route="works" @click="clickNavItem">Works</div>
-    <div data-route="contact" @click="clickNavItem">Contact</div>
+    <!--<div data-route="" @click="clickNavItem"><img src="../assets/logo.png" alt="" width="30"></div>-->
+    <!--<div data-route="works" @click="clickNavItem">Works</div>-->
+    <!--<div data-route="contact" @click="clickNavItem">Contact</div>-->
   </nav>
 </template>
 
@@ -48,6 +48,10 @@ export default {
       next();
       this.setNavStyle();
     });
+
+    setTimeout(()=>{
+      this.$router.push({ path: `/works`});
+    },3000);
   }
 }
 </script>
